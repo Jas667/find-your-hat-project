@@ -1,0 +1,14 @@
+{
+  "name": "find-your-hat-project",
+  "version": "1.0.0",
+  "description": "Codecademy challenge project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Codecademy",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
