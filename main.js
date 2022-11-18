@@ -32,13 +32,12 @@ class Field {
         let hatPosition = Math.floor(Math.random() * newGeneratedField.length);
         let pathPosition = Math.floor(Math.random() * newGeneratedField.length);
         //check if both are the same. If not, position playing elements. If they are the same, change pathPosition.
-        if (hatPosition != pathPosition) {
-            newGeneratedField[hatPosition] = '^';
-            newGeneratedField[pathPosition] = '*';
-        } else {
-            newGeneratedField[hatPosition] = '^';
-            newGeneratedField[pathPosition - 3] = '*';
+        while (hatPosition === pathPosition) {
+            pathPosition = Math.floor(Math.random() * newGeneratedField.length);
         }
+        newGeneratedField[hatPosition] = '^';
+        newGeneratedField[pathPosition] = '*';
+
         //use splice to split array so it matches width/height paramaters. This will allow it to be passed to methods of Field array and be used in game
         let finalField = [];
         for (let i = 0; i < newGeneratedField.length; i += width) {
